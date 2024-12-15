@@ -1,0 +1,592 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Foodeiblog | Template</title>
+
+  <!-- tailwind css cdn -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- tailwind css cdn -->
+
+  <!-- remix icon cdn -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.5.0/remixicon.css" integrity="sha512-6p+GTq7fjTHD/sdFPWHaFoALKeWOU9f9MPBoPnvJEWBkGS4PKVVbCpMps6IXnTiXghFbxlgDE8QRHc3MU91lJg==" crossorigin="anonymous" referrerpolicy="no-referrer" /> 
+  <!-- remix icon cdn -->
+
+  <!-- google fonts link -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caudex:ital,wght@0,400;0,700;1,400;1,700&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Heebo:wght@100..900&family=Jost:ital,wght@0,100..900;1,100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nothing+You+Could+Do&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Oswald:wght@200..700&family=Pacifico&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poiret+One&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet"> 
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caudex:ital,wght@0,400;0,700;1,400;1,700&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Heebo:wght@100..900&family=Jost:ital,wght@0,100..900;1,100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nothing+You+Could+Do&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Oswald:wght@200..700&family=Pacifico&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poiret+One&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Rubik:ital,wght@0,300..900;1,300..900&family=Unna:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  <!-- google fonts link -->
+</head>
+<style>
+  *{
+    font-family: "Nunito Sans", sans-serif;
+  }
+  .nav-menu a{
+    position: relative;
+  }
+  .nav-menu a::before{
+    position: absolute;
+    content: "";
+    left: 50%;
+    right: 50%;
+    border-bottom: 3.2px solid #F39430;
+    height: 100%;
+    width: 0%;
+    transition: 0.6s;
+  }
+  .nav-menu a:hover::before{
+    width: 100%;
+    left: 0%;
+    right: 0%;
+  }
+  .img-item:hover .mainimg-dtl{
+    animation: customZoomIn 0.6s ease-in-out forwards;
+  }
+  .img-item:not(:hover) .mainimg-dtl {
+    animation: customZoomOut 0.6s ease-in-out forwards;
+}
+  @keyframes customZoomIn {
+    0% {
+      transform: scale(0.6);
+      opacity: 0;
+    }
+    100% {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+  @keyframes customZoomOut {
+    0% {
+      transform: scale(1);
+      opacity: 1;
+    }
+    100% {
+      transform: scale(0.6);
+      opacity: 0;
+    }
+  }
+  .part-item2{
+    position: relative;
+  }
+  .part-item2::before{
+    content: "";
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    -webkit-box-shadow: inset 200px 200px 5px 300px rgba(0,0,0,0.62);
+    -moz-box-shadow: inset 200px 200px 5px 300px rgba(0,0,0,0.62);
+    box-shadow: inset 200px 200px 5px 300px rgba(0,0,0,0.62);
+  }
+</style>
+
+</style>
+<body>
+  <div class="bg w-full h-auto">
+    <!-- navbar -->
+    <div class="navbar-container w-full h-auto">
+      <div class="nav-top h-[42px] w-full bg-[#F5F5F5]">
+        <div class="nav-box h-full w-full flex items-center justify-between lg:max-w-[1200px] lg:px-[30px] md:px-[15px] px-[65px] mx-auto">
+          <i class="ri-menu-line font-black cursor-pointer"></i>
+          <div class="nav-menu h-full text-[15px] pt-[10px] font-semibold md:flex items-center gap-11 hidden">
+            <a href="#" class="font-[Unna] h-full duration-[600ms] hover:text-[#F39430]">HOME</a>
+            <a href="#" class="font-[Unna] h-full duration-[600ms] hover:text-[#F39430]">RECIPES</a>
+            <a href="#" class="font-[Unna] h-full duration-[600ms] hover:text-[#F39430]">DINNER</a>
+            <a href="#" class="font-[Unna] h-full duration-[600ms] hover:text-[#F39430]">DESSERTS</a>
+            <a href="#" class="font-[Unna] h-full duration-[600ms] hover:text-[#F39430]">PAGES</a>
+            <a href="#" class="font-[Unna] h-full duration-[600ms] hover:text-[#F39430]">ABOUT</a>
+            <a href="#" class="font-[Unna] h-full duration-[600ms] hover:text-[#F39430]">CONTACT</a>
+          </div>
+          <i class="ri-search-line font-black cursor-pointer"></i>
+        </div>
+      </div>
+      <div class="nav-bottom h-[150px] w-full">
+        <div class="nav-box h-full w-full flex items-center md:justify-between justify-center lg:max-w-[1200px] lg:px-[30px] md:px-[15px] px-[35px] mx-auto">
+          <button class="h-[38px] w-[130px] border-[1px] border-[#f39430] font-bold text-[14px] duration-[400ms] hover:bg-[#f39430] hover:text-white 
+          hover:duration-[400ms] md:block hidden">SUBSCRIBE</button>
+          <img src="./Assets/logo.png" alt="">
+          <div class="nav-icon md:flex gap-3 text-[15px] hidden">
+            <i class="ri-facebook-fill cursor-pointer"></i>
+            <i class="ri-twitter-fill cursor-pointer"></i>
+            <i class="ri-youtube-fill cursor-pointer"></i>
+            <i class="ri-instagram-line cursor-pointer"></i>
+            <i class="ri-mail-line cursor-pointer"></i>
+          </div>
+        </div>
+      </div>
+    </div> 
+    <!-- navbar -->
+
+    <!-- hero section -->
+    <div class="hero-box w-full h-auto flex lg:items-start items-center lg:flex-row flex-col gap-[11px]">
+      <div class="hero-left h-full lg:w-1/2 relative">
+        <img src="./Assets/hero-1.jpg" class="h-[630px] object-cover" alt="">
+        <div class="hero-dtl w-full h-auto flex sm:gap-8 gap-5 absolute bottom-0 px-8 py-5">
+          <div class="hero-date bg-[#3737377b] flex flex-col justify-center items-center sm:px-7 px-4 sm:py-4 py-2 h-full">
+            <p class="text-white sm:text-[42px] text-[35px] font-black leading-[27px] sm:pt-4 pt-2">08</p>
+            <p class="sm:text-[24px] text-[18px] font-[600] text-[#B2AFAF]">AUG</p>
+          </div>
+          <div class="hero-item">
+            <p class="text-[12px] text-[#F4952F]">VEGAN &nbsp;&nbsp;<span class="text-[#B2AFAF]">|</span>&nbsp;&nbsp; DESSERTS</p>
+            <h4 class="text-white sm:text-[26px] text-[20px] font-normal font-[Unna] pt-1 leading-[33px]">Vegan White Peach Mug Cobbler With CardamomVegan <br> White Peach Mug Cobbler With Cardamom</h4>
+            <p class="text-[12px] text-[#B2AFAF] pt-1">by <span class="text-white">Admin</span> &nbsp;&nbsp;<span class="text-[#B2AFAF]">|</span>&nbsp;&nbsp; 3 min read &nbsp;&nbsp;<span class="text-[#B2AFAF]">|</span>&nbsp;&nbsp; 20 Comment</p>
+          </div>
+        </div>
+      </div>
+      <div class="hero-right h-full lg:w-1/2 flex sm:flex-nowrap flex-wrap sm:justify-normal justify-center gap-[11px]">
+        <div class="hero-first h-full sm:w-1/2 flex flex-col gap-[11px]">
+          <div class="hero-top w-full h-1/2 relative">
+            <img src="./Assets/hero-2.jpg" class="sm:h-[309.5px] h-[420px] object-cover" alt="">
+            <div class="hero-dtl w-full h-auto flex absolute bottom-0 gap-5 pl-8 pr-3 py-5">
+              <div class="hero-date bg-[#3737377b] flex flex-col justify-center items-center h-full px-4 py-3">
+                <p class="text-white text-[26px] font-black leading-[27px]">08</p>
+                <p class="text-[12px] font-[600] text-[#B2AFAF]">AUG</p>
+              </div>
+              <div class="hero-item">
+                <p class="text-[12px] text-[#F4952F]">VEGAN &nbsp;&nbsp;<span class="text-[#B2AFAF]">|</span>&nbsp;&nbsp; DESSERTS</p>
+                <h5 class="text-white text-[20px] font-normal font-[Unna] pt-1 leading-[28px]">How to Make a Milkshake With Any <br />Ice Cream, Any Toppings...</h5>
+              </div>
+            </div>
+          </div>
+          <div class="hero-btm w-full h-1/2 relative">
+            <img src="./Assets/hero-3.jpg" class="sm:h-[309.5px] h-[420px] object-cover" alt="">
+            <div class="hero-dtl w-full h-auto flex absolute bottom-0 gap-5 pl-8 pr-7 py-5">
+              <div class="hero-date bg-[#3737377b] flex flex-col justify-center items-center h-full px-4 py-3">
+                <p class="text-white text-[26px] font-black leading-[27px]">08</p>
+                <p class="text-[12px] font-[600] text-[#B2AFAF]">AUG</p>
+              </div>
+              <div class="hero-item">
+                <p class="text-[12px] text-[#F4952F]">VEGAN &nbsp;&nbsp;<span class="text-[#B2AFAF]">|</span>&nbsp;&nbsp; DESSERTS</p>
+                <h5 class="text-white text-[20px] font-normal font-[Unna] pt-1 leading-[28px]">Vintage Copper Preserve Pan with<br>Brass Handles, Mid 19th Century</h5> 
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="hero-second h-full sm:w-1/2 relative">
+          <img src="./Assets/hero-4.jpg" class="sm:h-[630px] h-[835px] object-cover" alt="">
+          <div class="hero-dtl w-full h-auto flex absolute bottom-0 gap-5 pl-8 pr-3 py-5">
+            <div class="hero-date bg-[#3737377b] flex flex-col justify-center items-center h-full px-4 py-3">
+              <p class="text-white text-[26px] font-black leading-[27px]">08</p>
+              <p class="text-[12px] font-[600] text-[#B2AFAF]">AUG</p>
+            </div>
+            <div class="hero-item">
+              <p class="text-[12px] text-[#F4952F]">VEGAN &nbsp;&nbsp;<span class="text-[#B2AFAF]">|</span>&nbsp;&nbsp; DESSERTS</p>
+              <h5 class="text-white text-[20px] font-normal font-[Unna] pt-1 leading-[28px]">Marinated Lentil Salad with Zucch <br />ini and Tomatoes</h5>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div> 
+    <!-- hero section -->
+
+    <!-------------------------------------------------------- main section START ----------------------------------------------------->
+    <main class="w-full h-auto py-[100px] lg:max-w-[1200px] sm:px-[30px] px-[15px] md:max-w-[768px] sm:max-w-[640px] mx-auto">
+      <div class="img-list w-full h-full flex lg:flex-nowrap flex-wrap sm:justify-between justify-center gap-7">
+        <div class="img-item group h-full w-auto relative flex justify-center items-center">
+          <img src="./Assets/cat-1.jpg" alt="">
+          <div class="mainimg-dtl bg-white px-5 py-3 absolute opacity-0 duration-500 group-hover:opacity-100">
+            <h5 class="text-[20px] font-[500] font-[Unna]">DINNER</h5>
+            <P class="text-[#888888] text-[14px] font-[600]">28 articles</P>
+          </div>
+        </div>
+        <div class="img-item group h-full w-auto relative flex justify-center items-center">
+          <img src="./Assets/cat-2.jpg" alt="">
+          <div class="mainimg-dtl bg-white px-5 py-3 absolute opacity-0 duration-500 group-hover:opacity-100">
+            <h5 class="text-[20px] font-[500] font-[Unna]">DINNER</h5>
+            <P class="text-[#888888] text-[14px] font-[600]">28 articles</P>
+          </div>
+        </div>
+        <div class="img-item group h-full w-auto relative flex justify-center items-center">
+          <img src="./Assets/cat-3.jpg" alt="">
+          <div class="mainimg-dtl bg-white px-5 py-3 absolute opacity-0 duration-500 group-hover:opacity-100">
+            <h5 class="text-[20px] font-[500] font-[Unna]">DINNER</h5>
+            <P class="text-[#888888] text-[14px] font-[600]">28 articles</P>
+          </div>
+        </div>
+        <div class="img-item group h-full w-auto relative flex justify-center items-center">
+          <img src="./Assets/cat-4.jpg" alt="">
+          <div class="mainimg-dtl bg-white px-5 py-3 absolute opacity-0 duration-500 group-hover:opacity-100">
+            <h5 class="text-[20px] font-[500] font-[Unna]">DINNER</h5>
+            <P class="text-[#888888] text-[14px] font-[600]">28 articles</P>
+          </div>
+        </div>
+      </div>
+      <!---------------------------------- about section START ------------------------------->
+      <div class="about h-auto w-full flex md:flex-row flex-col gap-7 mt-16 relative">
+        <!-- about-left part -->
+        <div class="about-left h-full md:w-[67.5%] w-full">
+          <div class="about-start h-auto w-auto">
+            <img src="./Assets/cp-1.jpg" class="h-[535px] w-full object-cover" alt="">
+            <div class="date bg-white px-[18.5px] py-3 absolute top-[22px] left-[22px] flex flex-col items-center justify-center">
+              <h4 class="text-[24px] font-black leading-[20px] pt-1">08</h4>
+              <p class="text-[12px] text-[#888888] font-[600]">AUG</p>
+            </div>
+            <div class="about-dtl text-center flex flex-col items-center">
+              <p class="text-[12px] text-[#F4952F] font-semibold pt-6">VEGAN &nbsp;&nbsp;<span class="text-[#B2AFAF]">|</span>&nbsp;&nbsp; DESSERTS</p>
+              <ul class="pt-3">
+                <li><a href="#" class="font-[Unna] text-[26px] leading-[34px] hover:underline">The Absolute Best Way to Cook Steak Perfectly, According to Wayyy Too Many Tests</a></li>
+              </ul>
+              <p class="text-[12px] text-[#888888] pt-3">by <span class="text-black">Admin</span> &nbsp;&nbsp;<span class="text-[#B2AFAF]">|</span>&nbsp;&nbsp; 3 min read &nbsp;&nbsp;<span class="text-[#B2AFAF]">|</span>&nbsp;&nbsp; 20 Comment</p>
+              <p class="text-[#444444] text-[15px] pt-4">Dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur excepteur sint...</p>
+              <button class="h-[38px] w-[140px] border-[1px] border-[#f39430] mt-6 font-bold text-[14px] duration-[400ms] hover:bg-[#f39430] hover:text-white 
+              hover:duration-[400ms] md:block hidden">READ MORE</button>
+            </div>
+            <div class="about-icon flex justify-center items-center gap-6 mt-6">
+              <span class="text-[#888888] font-[600] text-[14px]">SHARE</span>
+              <div class="icon cursor-pointer">
+                <i class="ri-facebook-fill text-[17.5px]"></i>
+                <span class="text-[#888888] font-[600] text-[14px]">82</span>
+              </div>
+              <div class="icon cursor-pointer">
+                <i class="ri-twitter-fill text-[17.5px]"></i>
+                <span class="text-[#888888] font-[600] text-[14px]">24</span>
+              </div>
+              <div class="icon cursor-pointer">
+                <i class="ri-mail-line text-[17.5px]"></i>
+                <span class="text-[#888888] font-[600] text-[14px]">08</span>
+              </div>
+            </div>
+          </div>
+          <div class="left-part h-full w-full flex sm:flex-row flex-col gap-8 mt-12">
+            <!-- main section left-part first section START -->
+            <div class="first h-auto sm:w-1/2 w-full">
+              <div class="part-item h-auto w-full flex flex-col items-center relative">
+                <img src="./Assets/cp-2.jpg" class="w-full" alt="">
+                <div class="date bg-white px-[17.5px] py-3 absolute top-[22px] left-[22px] flex flex-col items-center justify-center">
+                  <h4 class="text-[26px] font-black leading-[20px] pt-1">08</h4>
+                  <p class="text-[12px] text-[#888888] font-[600]">AUG</p>
+                </div>
+                <div class="about-dtl text-center flex flex-col items-center">
+                  <p class="text-[12px] text-[#F4952F] font-semibold pt-6">RECIPE</p>
+                  <ul class="pt-1">
+                    <li><a href="#" class="font-[Unna] text-[22px] leading-[30px] hover:underline">The Best Weeknight Baked Potatoes, 3 Creative Ways</a></li>
+                  </ul>
+                  <p class="text-[12px] text-[#888888] pt-2">by <span class="text-black">Admin</span> &nbsp;&nbsp;<span class="text-[#B2AFAF]">|</span>&nbsp;&nbsp; 
+                  3 min read &nbsp;&nbsp;<span class="text-[#B2AFAF]">|</span>&nbsp;&nbsp; 20 Comment</p>
+                  <p class="text-[#444444] text-[14px] pt-3 leading-[24px]">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt dolore magna aliqua. Quis ipsum suspendisse ultrices gravida...</p>
+                </div>
+              </div>
+              <div class="part-item h-auto w-full flex flex-col items-center relative mt-12">
+                <img src="./Assets/cp-4.jpg" class="w-full" alt="">
+                <div class="date bg-white px-[17.5px] py-3 absolute top-[22px] left-[22px] flex flex-col items-center justify-center">
+                  <h4 class="text-[26px] font-black leading-[20px] pt-1">08</h4>
+                  <p class="text-[12px] text-[#888888] font-[600]">AUG</p>
+                </div>
+                <div class="about-dtl text-center flex flex-col items-center">
+                  <p class="text-[12px] text-[#F4952F] font-semibold pt-6">VEGAN &nbsp;&nbsp;<span class="text-[#B2AFAF]">|</span>&nbsp;&nbsp; DESSERTS</p>
+                  <ul class="pt-1">
+                    <li><a href="#" class="font-[Unna] text-[22px] leading-[30px] hover:underline">The Best Grass Stain Remover Is Already In Your Pantry</a></li>
+                  </ul>
+                  <p class="text-[12px] text-[#888888] pt-2">by <span class="text-black">Admin</span> &nbsp;&nbsp;<span class="text-[#B2AFAF]">|</span>&nbsp;&nbsp; 
+                  3 min read &nbsp;&nbsp;<span class="text-[#B2AFAF]">|</span>&nbsp;&nbsp; 20 Comment</p>
+                  <p class="text-[#444444] text-[14px] pt-3 leading-[24px]">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt dolore magna aliqua. Quis ipsum suspendisse ultrices gravida...</p>
+                </div>
+              </div>
+              <div class="part-item2 h-auto w-full relative mt-12 flex justify-center items-center">
+                <img src="./Assets/cp-6.jpg" class="w-full" alt="">
+                <div class="about-dtl text-center flex flex-col items-center absolute lg:px-0 px-2">
+                  <div class="date bg-[#28282889] px-[17.5px] py-3 flex flex-col items-center justify-center">
+                    <h4 class="text-[26px] text-white font-black leading-[20px] pt-1">08</h4>
+                    <p class="text-[12px] text-[#888888] font-[600]">AUG</p>
+                  </div>
+                  <p class="lg:text-[12px] sm:text-[11px] text-[12px] text-[#F4952F] font-semibold pt-6">VEGAN &nbsp;&nbsp;<span class="text-[#acabab]">|</span>&nbsp;&nbsp; DESSERTS</p>
+                  <ul class="pt-1">
+                    <li><a href="#" class="font-[Unna] text-white lg:text-[22px] sm:text-[18px] text-[22px] lg:leading-[30px] hover:underline">This Summer Snacking Cake Is theSweetest Excuse to...</a>
+                    </li>
+                  </ul>
+                  <div class="about-icon flex justify-center items-center gap-6 mt-2 text-[#b4b3b3] lg:px-0 px-2">
+                    <span class="font-[600] lg:text-[14px] sm:text-[12.5px] text-[14px]">SHARE</span>
+                    <div class="icon cursor-pointer">
+                      <i class="ri-facebook-fill lg:text-[17.5px] sm:text-[16px] text-[17.5px]"></i>
+                      <span class="font-[600] lg:text-[14px] sm:text-[12.5px] text-[14px]">82</span>
+                    </div>
+                    <div class="icon cursor-pointer">
+                      <i class="ri-twitter-fill lg:text-[17.5px] sm:text-[16px] text-[17.5px]"></i>
+                      <span class="font-[600] lg:text-[14px] sm:text-[12.5px] text-[14px]">24</span>
+                    </div>
+                    <div class="icon cursor-pointer">
+                      <i class="ri-mail-line lg:text-[17.5px] sm:text-[16px] text-[17.5px]"></i>
+                      <span class="font-[600] lg:text-[14px] sm:text-[12.5px] text-[14px]">08</span>
+                    </div>
+                  </div>
+                </div>
+              </div>   
+              <div class="part-item h-auto w-full flex flex-col items-center relative mt-14">
+                <img src="./Assets/cp-8.jpg" class="w-full" alt="">
+                <div class="date bg-white px-[17.5px] py-3 absolute top-[22px] left-[22px] flex flex-col items-center justify-center">
+                  <h4 class="text-[26px] font-black leading-[20px] pt-1">08</h4>
+                  <p class="text-[12px] text-[#888888] font-[600]">AUG</p>
+                </div>
+                <div class="about-dtl text-center flex flex-col items-center">
+                  <p class="text-[12px] text-[#F4952F] font-semibold pt-6">SMOOTHIE</p>
+                  <ul class="pt-1">
+                    <li><a href="#" class="font-[Unna] text-[22px] leading-[30px] hover:underline">This 2-Ingredient Spread Makes Any Egg Sandwich So Much Better</a>
+                    </li>
+                  </ul>
+                  <p class="text-[12px] text-[#888888] pt-2">by <span class="text-black">Admin</span> &nbsp;&nbsp;<span class="text-[#B2AFAF]">|</span>&nbsp;&nbsp; 
+                  3 min read &nbsp;&nbsp;<span class="text-[#B2AFAF]">|</span>&nbsp;&nbsp; 20 Comment</p>
+                  <p class="text-[#444444] text-[14px] pt-3 leading-[24px]">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt dolore magna aliqua. Quis ipsum suspendisse ultrices gravida...</p>
+                </div>
+              </div>              
+            </div>
+            <!-- main section left-part first section END -->
+
+            <!-- main section left-part second section START -->
+            <div class="second h-auto sm:w-1/2 w-full">
+              <div class="part-item flex flex-col items-center h-auto w-full relative">
+                <img src="./Assets/cp-3.jpg" class="w-full" alt="">
+                <div class="date bg-white px-[17.5px] py-3 absolute top-[22px] left-[22px] flex flex-col items-center justify-center">
+                  <h4 class="text-[26px] font-black leading-[20px] pt-1">08</h4>
+                  <p class="text-[12px] text-[#888888] font-[600]">AUG</p>
+                </div>
+                <div class="about-dtl text-center flex flex-col items-center">
+                  <p class="text-[12px] text-[#F4952F] font-semibold pt-6">DINNER</p>
+                  <ul class="pt-1">
+                    <li><a href="#" class="font-[Unna] text-[22px] leading-[30px] hover:underline">17 Perfect Gifts for Your Vegan Friend Because Sometimes...</a></li>
+                  </ul>
+                  <p class="text-[12px] text-[#888888] pt-2">by <span class="text-black">Admin</span> &nbsp;&nbsp;<span class="text-[#B2AFAF]">|</span>&nbsp;&nbsp; 
+                  3 min read &nbsp;&nbsp;<span class="text-[#B2AFAF]">|</span>&nbsp;&nbsp; 20 Comment</p>
+                  <p class="text-[#444444] text-[14px] pt-3 leading-[24px]">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt dolore magna aliqua. Quis ipsum suspendisse ultrices gravida...</p>
+                </div>
+              </div>  
+              <div class="part-item h-auto w-full bg-[#F5F5F5] mt-11 py-6 px-8">
+                <img src="./Assets/quote.png" alt="">
+                <p class="text-[15px] font-[600] pt-4 leading-[26px] tracking-[0.4px]">Lorem ipsum dolor amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt labore et dolore magna aliqua gravida.</p>
+                <div class="f-name w-full text-[#F4952F] text-[15px] font-[500] pt-4 flex justify-end">Elena T.Jaivy</div>
+              </div>
+              <div class="part-item h-auto w-full flex flex-col items-center relative mt-14">
+                <img src="./Assets/cp-5.jpg" class="w-full" alt="">
+                <div class="date bg-white px-[17.5px] py-3 absolute top-[22px] left-[22px] flex flex-col items-center justify-center">
+                  <h4 class="text-[26px] font-black leading-[20px] pt-1">08</h4>
+                  <p class="text-[12px] text-[#888888] font-[600]">AUG</p>
+                </div>
+                <div class="about-dtl text-center flex flex-col items-center">
+                  <p class="text-[12px] text-[#F4952F] font-semibold pt-6">DRINKS</p>
+                  <ul class="pt-1">
+                    <li><a href="#" class="font-[Unna] text-[22px] leading-[30px] hover:underline">A 5-Minute Peach Mug Cobbler That Just So Happens to...</a></li>
+                  </ul>
+                  <p class="text-[12px] text-[#888888] pt-2">by <span class="text-black">Admin</span> &nbsp;&nbsp;<span class="text-[#B2AFAF]">|</span>&nbsp;&nbsp; 
+                  3 min read &nbsp;&nbsp;<span class="text-[#B2AFAF]">|</span>&nbsp;&nbsp; 20 Comment</p>
+                  <p class="text-[#444444] text-[14px] pt-3 leading-[24px]">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt dolore magna aliqua. Quis ipsum suspendisse ultrices gravida...</p>
+                </div>
+              </div>  
+              <div class="part-item h-auto w-full flex flex-col items-center relative mt-12">
+                <img src="./Assets/cp-7.jpg" class="w-full" alt="">
+                <div class="date bg-white px-[17.5px] py-3 absolute top-[22px] left-[22px] flex flex-col items-center justify-center">
+                  <h4 class="text-[26px] font-black leading-[20px] pt-1">08</h4>
+                  <p class="text-[12px] text-[#888888] font-[600]">AUG</p>
+                </div>
+                <div class="about-dtl text-center flex flex-col items-center">
+                  <p class="text-[12px] text-[#F4952F] font-semibold pt-6">VEGAN &nbsp;&nbsp;<span class="text-[#acabab]">|</span>&nbsp;&nbsp; DESSERTS</p>
+                  <ul class="pt-1">
+                    <li><a href="#" class="font-[Unna] text-[22px] leading-[30px] hover:underline">Fresh Herb Polenta with Parsnip Chips and Maple Butter</a></li>
+                  </ul>
+                  <p class="text-[12px] text-[#888888] pt-2">by <span class="text-black">Admin</span> &nbsp;&nbsp;<span class="text-[#B2AFAF]">|</span>&nbsp;&nbsp; 
+                  3 min read &nbsp;&nbsp;<span class="text-[#B2AFAF]">|</span>&nbsp;&nbsp; 20 Comment</p>
+                  <p class="text-[#444444] text-[14px] pt-3 leading-[24px]">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt dolore magna aliqua. Quis ipsum suspendisse ultrices gravida...</p>
+                </div>
+              </div>  
+            </div>
+            <!-- main section left part second section END -->
+          </div>
+        </div>
+        <div class="about-right h-auto md:w-[32.5%] w-full">
+          <div class="about-part">
+            <p class="text-[#111111] text-[15px]"><span style="background: linear-gradient(white,white,#fcd1a0,#fcd1a0);">ABOUT ME</span></p>
+            <img src="./Assets/sidebar-about.jpg" class="w-full mt-9" alt="">
+            <h6 class="text-[#444444] text-[15px] pt-4">Hi every one! I,m <span class="text-[#F4952F]">Lena Mollein.</span></h6>
+            <p class="text-[14px] text-[#444444] leading-[26px]">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            <button class="h-[38px] w-[135px] border-[1px] border-[#f39430] mt-4 font-bold text-[14px] duration-[400ms] hover:bg-[#f39430] hover:text-white 
+            hover:duration-[400ms] md:block hidden">READ MORE</button>
+          </div>
+          <div class="follow-part">
+            <p class="text-[#111111] text-[15px] pt-14"><span class="font-[Unna]" style="background: linear-gradient(white,white,#fcd1a0,#fcd1a0);">
+              FOLLOW ME</span></p>
+            <div class="icons w-auto h-[45px] flex lg:flex-nowrap flex-wrap gap-3 mt-[30px]">
+              <div class="icon h-full w-[45px] rounded-[50%] bg-[#F2F2F2] cursor-pointer text-[17px] duration-[400ms] hover:bg-[#f4952f] hover:text-white flex justify-center items-center"><i class="ri-facebook-fill"></i></div>
+              <div class="icon h-full w-[45px] rounded-[50%] bg-[#F2F2F2] cursor-pointer text-[17px] duration-[400ms] hover:bg-[#f4952f] hover:text-white flex justify-center items-center"><i class="ri-twitter-fill"></i></div>
+              <div class="icon h-full w-[45px] rounded-[50%] bg-[#F2F2F2] cursor-pointer text-[17px] duration-[400ms] hover:bg-[#f4952f] hover:text-white flex justify-center items-center"><i class="ri-youtube-fill"></i></div>
+              <div class="icon h-full w-[45px] rounded-[50%] bg-[#F2F2F2] cursor-pointer text-[17px] duration-[400ms] hover:bg-[#f4952f] hover:text-white flex justify-center items-center"><i class="ri-instagram-line"></i></div>
+              <div class="icon h-full w-[45px] rounded-[50%] bg-[#F2F2F2] cursor-pointer text-[17px] duration-[400ms] hover:bg-[#f4952f] hover:text-white flex justify-center items-center"><i class="ri-mail-line"></i></div>
+            </div>
+          </div>
+          <div class="post-part lg:mt-16 md:mt-24 mt-14">
+            <p class="text-[#111111] text-[15px]"><span class="font-[Unna]" style="background: linear-gradient(white,white,#fcd1a0,#fcd1a0);">
+              FEATURE POSTS</span></p>
+            <div class="post-img">
+              <div class="img relative">
+                <img src="./Assets/feature-post.jpg" class=" w-full mt-8 h-[200px] object-cover" alt="">
+                <div class="post-detail absolute bottom-0 px-5 py-4">
+                  <p class="text-[12px] text-[#F4952F] font-semibold">DINNER</p>
+                  <ul class="pt-1">
+                    <li><a href="#" class="font-[Unna] text-[18px] font-semibold text-white">This Japanese Way of Making Iced Coffee Is a Game...</a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="date-container flex flex-col gap-8 mt-7">
+                <div class="datebox w-full h-auto flex gap-5">
+                  <div class="date bg-[#F5F5F5] lg:h-auto h-[68px] px-[17.5px] flex flex-col items-center justify-center">
+                    <h4 class="text-[26px] font-black leading-[20px] pt-1">08</h4>
+                    <p class="text-[12px] text-[#888888] font-[600]">AUG</p>
+                  </div>
+                  <div class="date-dtl pr-3 lg:pt-1">
+                    <p class="text-[12px] text-[#F4952F] font-semibold">DINNER</p>
+                    <ul class="pt-1">
+                      <li class="leading-[22px]"><a href="#" class="font-[Unna] text-[18px] font-bold" style="word-spacing: 1px;">Grilled Potato and Green Bean Salad</a></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="datebox w-full h-auto flex gap-5">
+                  <div class="date bg-[#F5F5F5] lg:h-auto h-[68px] px-[17.5px] flex flex-col items-center justify-center">
+                    <h4 class="text-[26px] font-black leading-[20px] pt-1">05</h4>
+                    <p class="text-[12px] text-[#888888] font-[600]">AUG</p>
+                  </div>
+                  <div class="date-dtl pr-3 lg:pt-1">
+                    <p class="text-[12px] text-[#F4952F] font-semibold">SMOOTHIE</p>
+                    <ul class="pt-1">
+                      <li class="leading-[22px]"><a href="#" class="font-[Unna] text-[18px] font-bold" style="word-spacing: 1px;">The $8 French Rosé I Buy in Bulk Every Summer</a></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="datebox w-full h-auto flex gap-5">
+                  <div class="date bg-[#F5F5F5] lg:h-auto h-[68px] px-[17.5px] flex flex-col items-center justify-center">
+                    <h4 class="text-[26px] font-black leading-[20px] pt-1">26</h4>
+                    <p class="text-[12px] text-[#888888] font-[600]">JUL</p>
+                  </div>
+                  <div class="date-dtl pr-3 lg:pt-1">
+                    <p class="text-[12px] text-[#F4952F] font-semibold">DESERT</p>
+                    <ul class="pt-1">
+                      <li class="leading-[22px]"><a href="#" class="font-[Unna] text-[18px] font-bold" style="word-spacing: 1px;">Ina Garten's Skillet-Roasted Lemon Chicken</a></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="datebox w-full h-auto flex gap-5">
+                  <div class="date bg-[#F5F5F5] lg:h-auto h-[68px] px-[17.5px] flex flex-col items-center justify-center">
+                    <h4 class="text-[26px] font-black leading-[20px] pt-1">16</h4>
+                    <p class="text-[12px] text-[#888888] font-[600]">JUL</p>
+                  </div>
+                  <div class="date-dtl pr-3 lg:pt-1">
+                    <p class="text-[12px] text-[#F4952F] font-semibold">VEGAN</p>
+                    <ul class="pt-1">
+                      <li class="leading-[22px]"><a href="#" class="font-[Unna] text-[18px] font-bold" style="word-spacing: 1px;">The Best Weeknight Baked Potatoes, 3 Creative Ways</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="banner-part mt-12">
+            <img src="./Assets/banner.jpg" class="w-full" alt="">
+          </div>
+          <div class="categorie-part">
+            <p class="text-[#111111] text-[15px] pt-16"><span class="font-[Unna]" style="background: linear-gradient(white,white,#fcd1a0,#fcd1a0);">CATEGORIES
+            </span></p>
+            <div class="menu-list w-full h-auto mt-6">
+              <div class="menu-item w-full h-auto border-b-2 border-b-[#F4F4F4] py-[5px]">
+                <p class="text-[15px] cursor-pointer font-[600] text-[#212529] duration-[400ms] hover:text-[#F4952F] flex justify-between items-center">Recipes <span>128</span></p>
+              </div>
+              <div class="menu-item w-full h-auto border-b-2 border-b-[#F4F4F4] py-[5px]">
+                <p class="text-[15px] cursor-pointer font-[600] text-[#212529] duration-[400ms] hover:text-[#F4952F] flex justify-between items-center">Dinner <span>32</span></p>
+              </div>
+              <div class="menu-item w-full h-auto border-b-2 border-b-[#F4F4F4] py-[5px]">
+                <dl class="flex flex-col items-end">
+                  <dt class="text-[15px] w-full cursor-pointer pb-[5px] border-b-2 border-b-[#F4F4F4] font-semibold text-[#212529] duration-[400ms] hover:text-[#F4952F] flex justify-between items-center">Dessert <span>86</span></dt>
+                  <dd class="text-[15px] w-[95%] cursor-pointer py-[5px] border-b-2 border-b-[#F4F4F4] font-semibold text-[#212529] duration-[400ms] hover:text-[#F4952F] flex justify-between items-center">Smothie <span>25</span></dd>
+                  <dd class="text-[15px] w-[95%] cursor-pointer py-[5px] border-b-2 border-b-[#F4F4F4] font-semibold text-[#212529] duration-[400ms] hover:text-[#F4952F] flex justify-between items-center">Drinks <span>36</span></dd>
+                  <dd class="text-[15px] w-[95%] cursor-pointer pt-[5px] font-semibold text-[#212529] duration-[400ms] hover:text-[#F4952F] flex justify-between items-center">Cakes <span>15</span></dd>
+                </dl>
+              </div>
+              <div class="menu-item w-full h-auto border-b-2 border-b-[#F4F4F4] py-[5px]">
+                <p class="text-[15px] cursor-pointer font-[600] text-[#212529] duration-[400ms] hover:text-[#F4952F] flex justify-between items-center">Vegan <span>63</span></p>
+              </div>
+              <div class="menu-item w-full h-auto border-b-2 border-b-[#F4F4F4] py-[5px]">
+                <p class="text-[15px] cursor-pointer font-[600] text-[#212529] duration-[400ms] hover:text-[#F4952F] flex justify-between items-center">Weightloss <span>27</span></p>
+              </div>
+            </div>
+          </div>
+          <div class="subscribe-part">
+            <p class="text-[#111111] text-[15px] pt-12"><span class="font-[Unna]" style="background: linear-gradient(white,white,#fcd1a0,#fcd1a0);">SUBSCRIBE
+            </span></p>
+            <p class="pt-8 text-[15px] leading-[25px] font-light">Subscribe to our newsletter and get our newest updates right on your inbox.</p>
+            <form action="">
+              <input type="email" class="w-full h-[45px] border-[2px] outline-none text-[#888888] border-[#eeeeee] pl-4 text-[15px] placeholder:text-[#888888]
+              mt-4" placeholder="Your email" required>
+              <input type="checkbox" class="mt-5 cursor-pointer" id="check" required>&nbsp; <label for="check" class="text-[15px] text-[#888888]">I agree to the terms & conditions</label><br>
+              <input type="submit" value="SUBSCRIBE" class="h-[47px] w-[137px] text-white bg-[#F4952F] border-[1px] border-[#f4952f] mt-4 font-bold cursor-pointer text-[15px] duration-[400ms] hover:bg-transparent hover:text-[#212529]">
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="btn h-auto lg:w-[67.5%] w-full flex lg:justify-center justify-start">
+        <button class="h-[43px] w-[330px] cursor-pointer bg-[#EBEBEB] border-none mt-12 text-[#111111] text-[15px] font-[700] duration-[400ms] hover:bg-[#d5d5d5]">LOAD MORE</button>
+      </div> 
+      <!---------------------------------- about section END ------------------------------->
+    </main> 
+    <!-------------------------------------------------------- main section END ----------------------------------------------------->
+
+    <!------------------------------------------------------ footer section START --------------------------------------------------->
+    <!-- footer img part -->
+    <div class="fotimg-container w-full h-auto p-[20px] bg-[#efefef] flex justify-center items-center relative">
+      <div class="fotimg-list w-full h-full flex lg:flex-nowrap flex-wrap justify-center gap-3">
+        <div class="fotimg-item lg:w-auto h-full">
+          <img src="./Assets/ip-1.jpg" class="xl:h-[265px] sm:h-[285px] h-[250px] object-cover" alt="">
+        </div>
+        <div class="fotimg-item lg:w-auto h-full">
+          <img src="./Assets/ip-2.jpg" class="xl:h-[265px] sm:h-[285px] h-[250px] object-cover" alt="">
+        </div>
+        <div class="fotimg-item lg:w-auto h-full">
+          <img src="./Assets/ip-3.jpg" class="xl:h-[265px] sm:h-[285px] h-[250px] object-cover" alt="">
+        </div>
+        <div class="fotimg-item lg:w-auto h-full">
+          <img src="./Assets/ip-4.jpg" class="xl:h-[265px] sm:h-[285px] h-[250px] object-cover" alt="">
+        </div>
+        <div class="fotimg-item lg:w-auto h-full">
+          <img src="./Assets/ip-5.jpg" class="xl:h-[265px] sm:h-[285px] h-[250px] object-cover" alt="">
+        </div>
+        <div class="fotimg-item lg:w-auto h-full">
+          <img src="./Assets/ip-6.jpg" class="xl:h-[265px] sm:h-[285px] h-[250px] object-cover" alt="">
+        </div>
+      </div>
+      <div class="insta-box absolute h-auto bg-[#FFFFFF] py-4 px-8 flex gap-4 items-center">
+        <div class="avtar">
+          <img src="./Assets/instagram-avatar.jpg" class="rounded-[50%]" alt="">
+        </div>
+        <div class="avtar-dtl">
+          <h5 class="text-[#111111] text-[20px] font-[700] font-[Unna]">@ foodieblog</h5>
+          <p class="text-[#888888] text-[14px] pt-[3px]">23.7k follwer</p>
+        </div>
+      </div>
+    </div> 
+    <!-- footer img part -->
+
+    <!-- footer bottom part -->
+    <div class="footer-container w-full h-auto flex flex-col items-center bg-[#F5F5F5]">
+      <div class="footer-box w-[75%] h-full flex flex-col items-center text-center py-14 border-b-[1px] border-b-[#dfdede]">
+        <img src="./Assets/logo.png" alt="">
+        <p class="pt-3 text-[#444444] text-[15px] leading-[26px]">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut <br>
+          labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra <br>
+          maecenas accumsan lacus vel facilisis.
+        </p>
+        <div class="icons w-auto h-[45px] flex lg:flex-nowrap flex-wrap justify-center gap-3 mt-[30px]">
+          <div class="icon h-full w-[45px] rounded-[50%] bg-[#E7E7E7] cursor-pointer text-[17px] duration-[400ms] hover:bg-[#f4952f] hover:text-white flex justify-center items-center"><i class="ri-facebook-fill"></i></div>
+          <div class="icon h-full w-[45px] rounded-[50%] bg-[#E7E7E7] cursor-pointer text-[17px] duration-[400ms] hover:bg-[#f4952f] hover:text-white flex justify-center items-center"><i class="ri-twitter-fill"></i></div>
+          <div class="icon h-full w-[45px] rounded-[50%] bg-[#E7E7E7] cursor-pointer text-[17px] duration-[400ms] hover:bg-[#f4952f] hover:text-white flex justify-center items-center"><i class="ri-instagram-line"></i></div>
+          <div class="icon h-full w-[45px] rounded-[50%] bg-[#E7E7E7] cursor-pointer text-[17px] duration-[400ms] hover:bg-[#f4952f] hover:text-white flex justify-center items-center"><i class="ri-youtube-fill"></i></div>
+          <div class="icon h-full w-[45px] rounded-[50%] bg-[#E7E7E7] cursor-pointer text-[17px] duration-[400ms] hover:bg-[#f4952f] hover:text-white flex justify-center items-center"><i class="ri-mail-line"></i></div>
+        </div>
+      </div>
+      <div class="footer-box py-8 px-2 text-center">
+        <p class="text-[#444444] text-[14px]">Copyright ©2024 All rights reserved | This template is made with <i class="ri-heart-fill text-[17px]"></i> by 
+          <span class="cursor-pointer text-[14px] text-[#47AFFB] duration-[400ms] hover:text-[#444444]">Colorlib</span></p>
+      </div>
+    </div>
+    <!-- footer bottom part -->
+    <!------------------------------------------------------ footer section END ----------------------------------------------------->
+  </div>
+</body>
+</html>
